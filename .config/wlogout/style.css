@@ -1,0 +1,44 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(30, 30, 46, 0.90);
+}
+
+button {
+	margin: 20px 60px;
+	border-radius: 20px;
+	border-color: #b4befe;
+	text-decoration-color: #cdd6f4;
+	color: #cdd6f4;
+	background-color: #181825;
+	border-style: solid;
+	border-width: 1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+	/* 20% Overlay 2, 80% mantle */
+	background-color: rgb(48, 50, 66);
+	outline-style: none;
+}
+
+#shutdown {
+    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/shutdown.svg");
+}
+
+#reboot {
+    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/reboot.svg");
+}
+
+#suspend {
+    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/suspend.svg");
+}
+
+#lock {
+    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/lock.svg");
+}
