@@ -1,0 +1,37 @@
+#!/bin/bash
+
+SAVE_DIR="$HOME/Pictures/SS"
+mkdir -p "$SAVE_DIR"
+
+TEMP_FILE="/tmp/screenshot.png"
+
+grim -g "$(slurp -d)" "$TEMP_FILE"
+
+if [ ! -f "$TEMP_FILE" ]; then
+    exit 0
+fi
+
+# Tofi menu
+ACTION=$(echo -e "Copy to clipboard\nSave as webp\nSave as png" | tofi --prompt-text "?")
+
+case "$ACTION" in
+    *clipboard* | *Clipboard*)
+        wl-copy < "$TEMP_FILE"
+        rm "$TEMP_FILE"
+        ;;
+    *webp* | *Webp*)
+        FILENAME="$SAVE_DIR/$(date +'%Y-%m-%d-%H%M%S').webp"
+        convert "$TEMP_FILE" -quality 90 "$FILENAME"
+        wl-copy < "$FILENAME"
+        rm "$TEMP_FILE"
+        ;;
+    *png* | *Png*)
+        FILENAME="$SAVE_DIR/$(date +'%Y-%m-%d-%H%M%S').png"
+        mv "$TEMP_FILE" "$FILENAME"
+        wl-copy < "$FILENAME"
+        rm "$TEMP_FILE"
+        ;;
+    *)
+        rm "$TEMP_FILE"
+        ;;
+esac
