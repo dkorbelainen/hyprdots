@@ -1,0 +1,7 @@
+{
+  "tabsize": 4,
+  "colorscheme": "catppuccin-mocha-transparent",
+  "cursorline": false,
+  "clipboard": "terminal",
+  "mouse": true
+}
