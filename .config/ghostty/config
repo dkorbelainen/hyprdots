@@ -1,0 +1,27 @@
+#theme = catppuccin-frappe
+#theme = 0x96f
+#theme = solarized-osaka-night
+#theme = synthwave-everything
+#theme = "Tinacious Design (Dark)"
+theme = TokyoNight
+
+font-family = JetBrains Mono Nerd Font
+font-size = 18
+cursor-style = block
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+background-opacity = 0.97
+background-blur = true
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
+window-vsync = true
+
+copy-on-select = true
+clipboard-paste-protection = false
+clipboard-read = allow
+
+keybind = ctrl+r=reload_config
+keybind = ctrl+left=text:\x1bb
+keybind = ctrl+right=text:\x1bf
