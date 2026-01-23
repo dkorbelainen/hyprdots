@@ -2,6 +2,20 @@
 
 Minimal Hyprland dotfiles with a quick install, a Tofi-powered screenshot helper (copy/save webp/png), and a Waybar VPN toggle.
 
+<details>
+<summary>Screenshot previews</summary>
+
+| Preview | Notes                                  |
+| ------- |----------------------------------------|
+| ![Terminal preview](previews/terminal.png) | Terminal, fastfetch                    
+| ![Hyprlock preview](previews/hyprlock.png)  | hyprlock                               
+![SDDM preview](previews/sddm.png) | SDDM                                   
+| ![Notifications preview](previews/notifications.png) | Notification center, waybar vpn toggle | |
+| ![Tofi preview](previews/tofi.png) | tofi launcher                          |
+| ![wlogout preview](previews/wlogout.png) | wlogout dialog                         |
+
+</details>
+
 ## Quick start
 
 ```bash
