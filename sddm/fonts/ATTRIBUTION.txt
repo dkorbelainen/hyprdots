@@ -1,0 +1,5 @@
+Fonts attribution
+
+- Google Sans Text (TTF): SIL Open Font License 1.1 (OFL 1.1). Source: https://fonts.google.com/specimen/Google+Sans
+- Neue Machina (OTF): Pangram Pangram; free for non-commercial use only. Source: https://pangrampangram.com/products/neue-machina
+- London Between / London Two / London MM (TTF): Pangram Pangram; free for non-commercial use only. Source: https://pangrampangram.com

@@ -3,16 +3,16 @@
 Minimal Hyprland dotfiles with a quick install, a Tofi-powered screenshot helper (copy/save webp/png), and a Waybar VPN toggle.
 
 <details>
-<summary>Screenshot previews</summary>
+<summary>Screenshots (click to expand)</summary>
 
-| Preview | Notes                                  |
-| ------- |----------------------------------------|
-| ![Terminal preview](previews/terminal.png) | Terminal, fastfetch                    
-| ![Hyprlock preview](previews/hyprlock.png)  | hyprlock                               
-![SDDM preview](previews/sddm.png) | SDDM                                   
-| ![Notifications preview](previews/notifications.png) | Notification center, waybar vpn toggle | |
-| ![Tofi preview](previews/tofi.png) | tofi launcher                          |
-| ![wlogout preview](previews/wlogout.png) | wlogout dialog                         |
+| Preview | Notes                                   |
+| --- |-----------------------------------------|
+| ![Terminal preview](previews/terminal.png) | terminal + fastfetch                    |
+| ![Hyprlock preview](previews/hyprlock.png) | hyprlock                                |
+| ![SDDM preview](previews/sddm.png) | SDDM theme                              |
+| ![Notifications preview](previews/notifications.png) | Notification center + Waybar VPN toggle |
+| ![Tofi preview](previews/tofi.png) | tofi launcher                           |
+| ![wlogout preview](previews/wlogout.png) | wlogout dialog                          |
 
 </details>
 
@@ -71,3 +71,14 @@ rEFInd is a boot manager; it makes selecting between multiple OSes/kernels easy 
 - Screenshot tool: `~/.config/hypr/hypr-screenshot` offers a Tofi menu to copy or save as webp/png into `~/Pictures/SS`. Ensure `grim`, `slurp`, `wl-clipboard`, `imagemagick`, and `tofi` are installed.
 - Hyprlock avatar: replace `~/.config/hypr/avatar.png` (placeholder provided) with your own image if you want it shown on the lock screen.
 - Optional app binds: remove or remap keybinds for `spotify`, `Telegram`, `obsidian` if unused.
+
+## Licenses & attributions
+
+- Repo configs/scripts: MIT (see `LICENSE`).
+- Catppuccin themes/icons usage: under MIT.
+- SDDM theme `vitreous`: by sane1090x, GPL-3.0 (see header in `sddm/themes/vitreous/vitreous.conf`).
+- Wallpaper `sddm/themes/vitreous/Backgrounds/wallpaper.jpg`: photo by Joshua Woroniecki, Unsplash License https://unsplash.com/photos/the-night-sky-is-filled-with-stars-and-trees-1ByBY06L-Z0.
+- Fonts bundled for SDDM (see `sddm/fonts/ATTRIBUTION.txt`):
+  - Google Sans Text: SIL Open Font License 1.1 (free/open for use & redistribution).
+  - Neue Machina (Pangram Pangram): free for non-commercial use only.
+  - London Between (Pangram Pangram): free for non-commercial use only.
