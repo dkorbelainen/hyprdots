@@ -68,7 +68,7 @@ rEFInd is a boot manager; it makes selecting between multiple OSes/kernels easy 
 
 ## Manual setup (not automated by scripts)
 
-- SDDM/Hyprpaper backgrounds: a sample `wallpaper.jpg` is included and set in `sddm/themes/vitreous/vitreous.conf` under `Backgrounds/`. Replace with your file if desired.
+- SDDM/Hyprpaper backgrounds: a sample `wallpaper.jpg` is included and set in `sddm/themes/vitreous/vitreous.conf` under `Backgrounds/` and in `.config/hypr/wallpaper.jpg`. Replace with your file if desired.
 - GTK theme/icon/cursor: install Catppuccin GTK, Colloid icons, and Bibata cursor yourself, then pick them in `nwg-look`.
 - VPN widget: Waybar scripts assume interface name `pandvpn`; edit `~/.config/waybar/scripts/vpn-*.sh` to yours.
 - Screenshot tool: `~/.config/hypr/hypr-screenshot` offers a Tofi menu to copy or save as webp/png into `~/Pictures/SS`. Ensure `grim`, `slurp`, `wl-clipboard`, `imagemagick`, and `tofi` are installed.
@@ -85,3 +85,4 @@ rEFInd is a boot manager; it makes selecting between multiple OSes/kernels easy 
   - Google Sans Text: SIL Open Font License 1.1 (free/open for use & redistribution).
   - Neue Machina (Pangram Pangram): free for non-commercial use only.
   - London Between (Pangram Pangram): free for non-commercial use only.
+- Catppuccin rEFInd theme: MIT (bundled from https://github.com/catppuccin/refind).
