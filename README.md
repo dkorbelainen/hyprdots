@@ -48,7 +48,9 @@ Example (Arch-based distros):
 
 ```bash
 sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look sddm fontconfig ttf-jetbrains-mono-nerd zsh git
-yay -S tofi wlogout
+yay -S tofi wlogout fzf
+chsh -s $(which zsh) # Change your shell to zsh
+source ~/.zshrc
 ```
 
 ## rEFInd
