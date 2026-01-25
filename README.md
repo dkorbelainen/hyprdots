@@ -65,4 +65,3 @@ What the scripts do:
 - Repo configs/scripts: MIT (see `LICENSE`).
 - Catppuccin themes/icons usage: under MIT.
 - Wallpaper `.config/hypr/wallpaper.jpg`: photo by Joshua Woroniecki, Unsplash License https://unsplash.com/photos/the-night-sky-is-filled-with-stars-and-trees-1ByBY06L-Z0.
-- Catppuccin rEFInd theme: MIT (bundled from https://github.com/catppuccin/refind).
