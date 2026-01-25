@@ -16,20 +16,6 @@ Minimal purple-themed Hyprland dotfiles with a quick install, a Tofi-powered scr
 
 </details>
 
-## Quick start
-
-```bash
-git clone https://github.com/dkorbelainen/hyprdots.git
-cd hyprdots
-chmod +x install.sh install-sddm.sh
-./install.sh --sddm   # drop --sddm if you only want user configs
-```
-
-What the scripts do:
-- symlink repo configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, gtk3/gtk4, micro)
-- link `.zshrc`, `.p10k.zsh`, `.gtkrc-2.0`
-- with `--sddm`, call `install-sddm.sh` as root to install the theme, fonts, and `/etc/sddm.conf`
-
 ## Dependencies
 
 Required to match the configs:
@@ -52,6 +38,20 @@ yay -S tofi wlogout fzf
 chsh -s $(which zsh) # Change your shell to zsh
 source ~/.zshrc
 ```
+
+## Quick start
+
+```bash
+git clone https://github.com/dkorbelainen/hyprdots.git
+cd hyprdots
+chmod +x install.sh install-sddm.sh
+./install.sh --sddm   # drop --sddm if you only want user configs
+```
+
+What the scripts do:
+- symlink repo configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, gtk3/gtk4, micro)
+- link `.zshrc`, `.p10k.zsh`, `.gtkrc-2.0`
+- with `--sddm`, call `install-sddm.sh` as root to install the theme, fonts, and `/etc/sddm.conf`
 
 ## rEFInd
 
