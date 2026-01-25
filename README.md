@@ -1,6 +1,6 @@
 # Hyprdots
 
-Minimal Hyprland dotfiles with a quick install, a Tofi-powered screenshot helper (copy/save webp/png), and a Waybar VPN toggle.
+Minimal purple-themed Hyprland dotfiles with a quick install, a Tofi-powered screenshot helper (copy/save webp/png), and a Waybar VPN toggle.
 
 <details>
 <summary>Screenshots (click to expand)</summary>
@@ -47,7 +47,8 @@ Required to match the configs:
 Example (Arch-based distros):
 
 ```bash
-sudo pacman -S hyprland waybar swaync tofi wlogout hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look sddm fontconfig zsh git
+sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look sddm fontconfig zsh git
+yay -S tofi wlogout
 ```
 
 ## rEFInd
