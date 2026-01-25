@@ -157,23 +157,16 @@ Pane {
             visible: config.FullBlur == "true" || config.PartialBlur == "true" ? true : false
         }
 
-        MultiEffect {
+        GaussianBlur {
             id: blur
 
             height: parent.height
 
-            // width: config.FullBlur == "true" ? parent.width : form.width
-            // anchors.centerIn: config.FullBlur == "true" ? parent : form
-
-            // This solves the problem when FullBlur and HaveFormBackground are set to true but PartialBlur is false and FormPosition isn't center
             width: (config.FullBlur == "true" && config.PartialBlur == "false" && config.FormPosition != "center") ? parent.width - formBackground.width : config.FullBlur == "true" ? parent.width : form.width
             anchors.centerIn: config.FullBlur == "true" ? backgroundImage : form
 
             source: config.FullBlur == "true" ? backgroundImage : blurMask
-            blurEnabled: true
-            autoPaddingEnabled: false
-            blur: config.Blur == "" ? 2.0 : config.Blur
-            blurMax: config.BlurMax == "" ? 48 : config.BlurMax
+            radius: config.Blur == "" ? 2.0 : config.Blur
             visible: config.FullBlur == "true" || config.PartialBlur == "true" ? true : false
         }
     }
