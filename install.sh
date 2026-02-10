@@ -26,11 +26,10 @@ link_path() {
 
 link_user_configs() {
   mkdir -p "$HOME/.config"
-  local configs=(fastfetch ghostty gtk-3.0 gtk-4.0 hypr micro nwg-look swaync tofi waybar wlogout)
+  local configs=(fastfetch ghostty hypr micro nwg-look swaync tofi waybar wlogout)
   for cfg in "${configs[@]}"; do
     link_path "$ROOT_DIR/.config/$cfg" "$HOME/.config/$cfg"
   done
-  link_path "$ROOT_DIR/.config/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
   link_path "$ROOT_DIR/.zshrc" "$HOME/.zshrc"
   if [[ -f "$ROOT_DIR/.p10k.zsh" ]]; then
     link_path "$ROOT_DIR/.p10k.zsh" "$HOME/.p10k.zsh"

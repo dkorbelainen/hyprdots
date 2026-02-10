@@ -20,20 +20,19 @@ Minimal purple-themed Hyprland dotfiles with a quick install, a Tofi-powered scr
 Required to match the configs:
 - Core: `hyprland`, `waybar`, `swaync`, `tofi`, `wlogout`
 - Daemons: `hyprpaper`, `hypridle`, `hyprlock`
-- Tools: `ghostty`, `fastfetch`, `micro`, `jq`
+- Tools: `ghostty`, `fastfetch`, `micro`, `jq`, `nwg-look`
 - Audio/brightness: `pipewire`/`wireplumber`, `pavucontrol`, `wpctl`, `brightnessctl`, `playerctl`
 - Screenshots: `grim`, `slurp`, `wl-clipboard`, `imagemagick`
 - Networking: `wireguard-tools`, `iproute2`
 - Notifications: `libnotify` (`notify-send`)
-- Theming: GTK 3/4, `nwg-look`, `fontconfig`
-- Themes/icons/cursor used in configs: Catppuccin GTK, Colloid icons, Bibata cursor
 - Bootloader (optional): `refind`
+- Display manager (recommended): SDDM with Astronaut theme
 
 Example (Arch-based distros):
 
 ```bash
-sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol exa brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look fontconfig ttf-jetbrains-mono-nerd zsh git
-yay -S tofi wlogout fzf
+sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git
+yay -S tofi wlogout bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
 chsh -s $(which zsh) # Change your shell to zsh
 source ~/.zshrc
 ```
@@ -48,13 +47,25 @@ chmod +x install.sh
 ```
 
 What the scripts do:
-- symlink repo configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, gtk3/gtk4, micro)
-- link `.zshrc`, `.p10k.zsh`, `.gtkrc-2.0`
+- symlink repo configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, micro)
+- link `.zshrc`, `.p10k.zsh`
 
 ## Manual setup (not automated by scripts)
 
 - Hyprpaper background: a sample `wallpaper.jpg` is included in `.config/hypr/wallpaper.jpg`. Replace with your file if desired.
-- GTK theme/icon/cursor: install Catppuccin GTK, Colloid icons, and Bibata cursor yourself, then pick them in `nwg-look`.
+- SDDM theme (recommended): [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
+- GTK theme/icons/cursor setup using `nwg-look`:
+  - Install cursor and GTK theme: `yay -S bibata-cursor-theme catppuccin-gtk-theme-mocha`
+  - Install icon theme (Colloid Purple Dracula):
+    ```bash
+    git clone https://github.com/vinceliuice/Colloid-icon-theme --depth=1
+    cd Colloid-icon-theme
+    ./install.sh -s dracula -t purple
+    ```
+  - Open `nwg-look` and set:
+    - **Icon Theme**: Colloid-Purple-Dracula-Dark (recommended)
+    - **Widget**: catppuccin-mocha-lavender-standard+default (recommended)
+    - **Cursor theme**: Bibata-Modern-Ice
 - VPN widget: Waybar scripts assume interface name `pandvpn`; edit `~/.config/waybar/scripts/vpn-*.sh` to yours.
 - Screenshot tool: `~/.config/hypr/hypr-screenshot` offers a Tofi menu to copy or save as webp/png into `~/Pictures/SS`. Ensure `grim`, `slurp`, `wl-clipboard`, `imagemagick`, and `tofi` are installed.
 - Hyprlock avatar: replace `~/.config/hypr/avatar.png` (placeholder provided) with your own image if you want it shown on the lock screen.
