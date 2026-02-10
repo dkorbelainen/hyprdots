@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-INTERFACE="pandvpn"  # ← то же самое
+INTERFACE="pandvpn" # replace with your interface name
 
 if ip link show "$INTERFACE" > /dev/null 2>&1; then
     sudo wg-quick down pandvpn
