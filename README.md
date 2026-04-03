@@ -23,6 +23,7 @@ Required to match the configs:
 - Tools: `ghostty`, `fastfetch`, `micro`, `jq`, `nwg-look`
 - Audio/brightness: `pipewire`/`wireplumber`, `pavucontrol`, `wpctl`, `brightnessctl`, `playerctl`
 - Screenshots: `grim`, `slurp`, `wl-clipboard`, `imagemagick`
+- Screen recording: `gpu-screen-recorder`
 - Networking: `wireguard-tools`, `iproute2`
 - Notifications: `libnotify` (`notify-send`)
 - Bootloader (optional): `refind`
@@ -31,7 +32,7 @@ Required to match the configs:
 Example (Arch-based distros):
 
 ```bash
-sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git
+sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git gpu-screen-recorder
 yay -S tofi wlogout bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
 chsh -s $(which zsh) # Change your shell to zsh
 source ~/.zshrc

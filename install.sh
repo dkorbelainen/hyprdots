@@ -36,6 +36,12 @@ link_user_configs() {
   fi
 }
 
+setup_directories() {
+  mkdir -p "$HOME/Videos/replays"
+  log "Created directory: $HOME/Videos/replays"
+}
+
 link_user_configs
+setup_directories
 
 log "All done. Restart your session to load the new configs."
