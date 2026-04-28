@@ -20,7 +20,7 @@ Minimal purple-themed Hyprland dotfiles with a quick install, a Tofi-powered scr
 Required to match the configs:
 - Core: `hyprland`, `waybar`, `swaync`, `tofi`, `wlogout`
 - Daemons: `hyprpaper`, `hypridle`, `hyprlock`
-- Tools: `ghostty`, `fastfetch`, `micro`, `jq`, `nwg-look`
+- Tools: `ghostty`, `fastfetch`, `micro`, `jq`, `nwg-look`, `gpu-screen-recorder`
 - Audio/brightness: `pipewire`/`wireplumber`, `pavucontrol`, `wpctl`, `brightnessctl`, `playerctl`
 - Screenshots: `grim`, `slurp`, `wl-clipboard`, `imagemagick`
 - Screen recording: `gpu-screen-recorder`
@@ -32,7 +32,7 @@ Required to match the configs:
 Example (Arch-based distros):
 
 ```bash
-sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git gpu-screen-recorder
+sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol gpu-screen-recorder brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git gpu-screen-recorder
 yay -S tofi wlogout bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
 chsh -s $(which zsh) # Change your shell to zsh
 source ~/.zshrc
