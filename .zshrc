@@ -62,6 +62,10 @@ alias ls='exa -l'
 alias syu='sudo pacman -Syu'
 alias y='yay -S'
 
+# Glorious Model O Debounce Time (gloriousctl)
+alias gloryon='sudo gloriousctl --set-debounce-time 4'
+alias gloryoff='sudo gloriousctl --set-debounce-time 12'
+
 # fzf & zoxide
 if command -v fzf &> /dev/null; then
     eval "$(fzf --zsh)"
