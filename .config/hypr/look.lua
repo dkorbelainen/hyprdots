@@ -26,7 +26,7 @@ hl.config({
         allow_tearing = false,
         layout = "dwindle",
         col = {
-            active_border = "rgba(bba2ffaa) rgba(956affaa)",
+            active_border = { colors = { "rgba(bba2ffaa)", "rgba(956affaa)" } },
             inactive_border = "rgba(d5cdf4aa)",
         },
     },
@@ -89,7 +89,7 @@ hl.curve("quick", {
     type = "bezier",
     points = { { 0.15, 0 }, { 0.1, 1 } },
 })
-hl.animation({ leaf = "global", enabled = true, speed = 10 })
+hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
 hl.animation({ leaf = "windows", enabled = true, speed = 4.79, bezier = "easeOutQuint" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, bezier = "easeOutQuint", style = "popin 87%" })

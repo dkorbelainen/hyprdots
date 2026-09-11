@@ -4,8 +4,6 @@
 
 ---@module 'hl'
 
-local mainMod = "SUPER"
-
 --###############
 
 --## MONITORS ###
@@ -31,15 +29,7 @@ hl.monitor({
 
 -- See https://wiki.hypr.land/Configuring/Keywords/
 
--- Set programs that you use
-
-local browser = "firefox"
-
-local terminal = "ghostty"
-
-local fileManager = "nautilus"
-
-local menu = "tofi -show drun"
+-- Set programs that you use, see vars.lua (required by binds.lua)
 
 --############################
 
@@ -51,11 +41,11 @@ local menu = "tofi -show drun"
 
 hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 
-hl.env("XCURSOR_SIZE", 24)
+hl.env("XCURSOR_SIZE", "24")
 
-hl.env("HYPRCURSOR_SIZE", 24)
+hl.env("HYPRCURSOR_SIZE", "24")
 
-hl.env("WLR_NO_HARDWARE_CURSORS", 1)
+hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
@@ -63,17 +53,17 @@ hl.env("GBM_BACKEND", "nvidia-drm")
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
-hl.env("WLR_DRM_NO_ATOMIC", 1)
+hl.env("WLR_DRM_NO_ATOMIC", "1")
 
-hl.env("__GL_VRR_ALLOWED", 0)
+hl.env("__GL_VRR_ALLOWED", "0")
 
-hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", 0)
+hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "0")
 
-hl.env("QT_SCALE_FACTOR", 1.25)
+hl.env("QT_SCALE_FACTOR", "1.25")
 
-hl.env("GDK_SCALE", 1)
+hl.env("GDK_SCALE", "1")
 
-hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", 1)
+hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 
 --##################
 
@@ -139,28 +129,13 @@ hl.window_rule({
     match = {
         class = "hyprland-run",
     },
-    move = { 20, "monitor_h-120" },
+    move = "20 monitor_h-120",
     float = true,
 })
 
 -- Import files
-
--- source = ~/.config/hypr/binds.conf -> requires manual conversion
--- local binds = require("binds")
--- TODO: convert ~/.config/hypr/binds.conf to .lua and use require()
-
--- source = ~/.config/hypr/autostart.conf -> requires manual conversion
--- local autostart = require("autostart")
--- TODO: convert ~/.config/hypr/autostart.conf to .lua and use require()
-
--- source = ~/.config/hypr/input.conf -> requires manual conversion
--- local input = require("input")
--- TODO: convert ~/.config/hypr/input.conf to .lua and use require()
-
--- source = ~/.config/hypr/look.conf -> requires manual conversion
--- local look = require("look")
--- TODO: convert ~/.config/hypr/look.conf to .lua and use require()
-
--- source = ~/.config/hypr/mocha.conf -> requires manual conversion
--- local mocha = require("mocha")
--- TODO: convert ~/.config/hypr/mocha.conf to .lua and use require()
+require("binds")
+require("autostart")
+require("input")
+require("look")
+require("mocha")
