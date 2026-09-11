@@ -44,7 +44,7 @@ hl.bind("ALT" .. " + " .. "P", hl.dsp.exec_cmd("~/.config/hypr/save-replay.sh"))
 
 hl.bind(vars.mainMod .. " + " .. "Escape", hl.dsp.exec_cmd("wlogout -b 2"))
 
-hl.bind("ALT" .. " + " .. "Space", hl.dsp.exec_cmd("tofi-run --drun-launch=true | xargs hyprctl dispatch exec --"))
+hl.bind("ALT" .. " + " .. "Space", hl.dsp.exec_cmd("tofi-run --drun-launch=true | xargs -I{} hyprctl dispatch 'hl.dsp.exec_cmd(\"{}\")'"))
 
 hl.bind(vars.mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
 
