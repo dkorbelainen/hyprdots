@@ -66,6 +66,9 @@ alias y='yay -S'
 alias gloryon='sudo gloriousctl --set-debounce-time 4'
 alias gloryoff='sudo gloriousctl --set-debounce-time 12'
 
+alias hyson=' systemctl --user start hysteria-client.service'
+alias hysoff='systemctl --user stop hysteria-client.service'
+
 # fzf & zoxide
 if command -v fzf &> /dev/null; then
     eval "$(fzf --zsh)"
@@ -86,3 +89,7 @@ export PATH=$PATH:~/.spicetify
 
 # p10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export http_proxy=http://127.0.0.1:8080
+export https_proxy=http://127.0.0.1:8080
+export all_proxy=socks5://127.0.0.1:1080
+export PATH="$HOME/.local/bin:$PATH"

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-INTERFACE="pandvpn"
+SERVICE="hysteria-client.service"
 
-if ip link show "$INTERFACE" > /dev/null 2>&1; then
-    echo '{"text": "pandvpn 󰞀", "class": "connected", "tooltip": "VPN active ('"$INTERFACE"')"}'
+if systemctl --user is-active --quiet "$SERVICE"; then
+    echo '{"text": "hysteria 󰞀", "class": "connected", "tooltip": "Hysteria proxy active"}'
 else
-    echo '{"text": "pandvpn 󰞀", "class": "disconnected", "tooltip": "VPN off"}'
+    echo '{"text": "hysteria 󰞀", "class": "disconnected", "tooltip": "Hysteria proxy off"}'
 fi

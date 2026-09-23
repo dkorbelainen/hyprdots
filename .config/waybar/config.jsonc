@@ -6,6 +6,8 @@
 	"modules-center": ["tray"],
 	"modules-right": [
 		"pulseaudio",
+		"backlight",
+		"battery",
 		"custom/vpn",
 		"custom/notification"
 	],
@@ -59,6 +61,26 @@
 	    "scroll-step": 1,
 	    "on-click": "pavucontrol",
 	    "ignored-sinks": ["Easy Effects Sink"]
+	},
+
+	"backlight": {
+	    "device": "intel_backlight",
+	    "format": "{percent}% {icon}",
+	    "format-icons": ["󰃞", "󰃟", "󰃠"],
+	    "on-scroll-up": "brightnessctl set 5%+",
+	    "on-scroll-down": "brightnessctl set 5%-",
+	    "max-length": 25
+	},
+
+	"battery": {
+	    "interval": 60,
+	    "states": {
+	        "warning": 30,
+	        "critical": 15
+	    },
+	    "format": "{capacity}% {icon}",
+	    "format-icons": ["", "", "", "", ""],
+	    "max-length": 25
 	},
 
 	"custom/vpn": {

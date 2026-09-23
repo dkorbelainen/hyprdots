@@ -16,7 +16,7 @@ hl.monitor({
     output   = "",
     mode     = "1920x1080@60",
     position = "auto",
-    scale    = "auto",
+    scale    = "1",
 })
 
 --monitor=,3840x2160@160,auto,1.5
@@ -59,11 +59,17 @@ hl.env("__GL_VRR_ALLOWED", "0")
 
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "0")
 
-hl.env("QT_SCALE_FACTOR", "1.25")
+hl.env("QT_SCALE_FACTOR", "1")
 
 hl.env("GDK_SCALE", "1")
 
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
+
+hl.env("http_proxy", "http://127.0.0.1:8080")
+
+hl.env("https_proxy", "http://127.0.0.1:8080")
+
+hl.env("all_proxy", "socks5://127.0.0.1:1080")
 
 --##################
 
