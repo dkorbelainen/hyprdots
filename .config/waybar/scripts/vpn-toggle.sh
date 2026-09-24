@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-INTERFACE="pandvpn" # replace with your interface name
+SERVICE="hysteria-client.service" # replace with your systemd user unit
 
-if ip link show "$INTERFACE" > /dev/null 2>&1; then
-    sudo wg-quick down pandvpn
+if systemctl --user is-active --quiet "$SERVICE"; then
+    systemctl --user stop "$SERVICE"
     notify-send "VPN" "Disconnected" -i network-vpn-disconnected -u normal
 else
-    sudo wg-quick up pandvpn
+    systemctl --user start "$SERVICE"
     notify-send "VPN" "Connected" -i network-vpn-acquiring -u normal
 fi
 
