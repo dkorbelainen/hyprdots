@@ -30,6 +30,7 @@ link_user_configs() {
   for cfg in "${configs[@]}"; do
     link_path "$ROOT_DIR/.config/$cfg" "$HOME/.config/$cfg"
   done
+  link_path "$ROOT_DIR/.config/spotify-launcher.conf" "$HOME/.config/spotify-launcher.conf"
   link_path "$ROOT_DIR/.zshrc" "$HOME/.zshrc"
   if [[ -f "$ROOT_DIR/.p10k.zsh" ]]; then
     link_path "$ROOT_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
