@@ -59,11 +59,11 @@ hl.bind("ALT" .. " + " .. "O", hl.dsp.exec_cmd("obsidian"))
 -- Zooming
 
 hl.bind("SUPER + mouse_up", function()
-    hl.exec_cmd("hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float + 1.0')")
+    hl.exec_cmd([[hyprctl eval "hl.config({ cursor = { zoom_factor = $(hyprctl getoption cursor:zoom_factor -j | jq '.float + 1.0') } })"]])
 end)
 
 hl.bind("SUPER + mouse_down", function()
-    hl.exec_cmd("hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq 'if .float - 1.0 < 1 then 1 else .float - 1.0 end')")
+    hl.exec_cmd([[hyprctl eval "hl.config({ cursor = { zoom_factor = $(hyprctl getoption cursor:zoom_factor -j | jq 'if .float - 1.0 < 1 then 1 else .float - 1.0 end') } })"]])
 end)
 
 hl.bind("Print", hl.dsp.exec_cmd("~/.config/hypr/hypr-screenshot"))
