@@ -55,13 +55,10 @@ What the scripts do:
 
 - Hyprpaper background: a sample `wallpaper.jpg` is included in `.config/hypr/wallpaper.jpg`. Replace with your file if desired.
 - SDDM theme (recommended): [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
-- GTK theme/icons/cursor setup using `nwg-look`:
-  - Install cursor and GTK theme: `yay -S bibata-cursor-theme catppuccin-gtk-theme-mocha`
-  - Install icon theme: `sudo pacman -S tela-circle-icon-theme-purple`
-  - Open `nwg-look` and set:
-    - **Icon Theme**: Tela circle purple (recommended)
-    - **Widget**: catppuccin-mocha-lavender-standard+default (recommended)
-    - **Cursor theme**: Bibata-Modern-Ice
+- Open `nwg-look` and set:
+  - **Icon Theme**: Tela circle purple (recommended)
+  - **Widget**: catppuccin-mocha-lavender-standard+default (recommended)
+  - **Cursor theme**: Bibata-Modern-Ice
 - VPN widget: Waybar scripts assume interface name `pandvpn`; edit `~/.config/waybar/scripts/vpn-*.sh` to yours.
 - Screenshot tool: `~/.config/hypr/hypr-screenshot` offers a Tofi menu to copy or save as webp/png into `~/Pictures/SS`. Ensure `grim`, `slurp`, `wl-clipboard`, `imagemagick`, and `tofi` are installed.
 - Hyprlock avatar: replace `~/.config/hypr/avatar.png` (placeholder provided) with your own image if you want it shown on the lock screen.
