@@ -32,7 +32,7 @@ Required to match the configs:
 Example (Arch-based distros):
 
 ```bash
-sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol gpu-screen-recorder brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git gpu-screen-recorder
+sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol gpu-screen-recorder brightnessctl playerctl grim slurp wl-clipboard imagemagick wireguard-tools iproute2 libnotify nwg-look zsh git gpu-screen-recorder tela-circle-icon-theme-purple ffmpegthumbnailer gst-libav gst-plugins-ugly
 yay -S tofi wlogout bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
 chsh -s $(which zsh) # Change your shell to zsh
 source ~/.zshrc
