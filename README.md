@@ -57,14 +57,9 @@ What the scripts do:
 - SDDM theme (recommended): [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 - GTK theme/icons/cursor setup using `nwg-look`:
   - Install cursor and GTK theme: `yay -S bibata-cursor-theme catppuccin-gtk-theme-mocha`
-  - Install icon theme (Colloid Purple Dracula):
-    ```bash
-    git clone https://github.com/vinceliuice/Colloid-icon-theme --depth=1
-    cd Colloid-icon-theme
-    ./install.sh -s dracula -t purple
-    ```
+  - Install icon theme: `sudo pacman -S tela-circle-icon-theme-purple`
   - Open `nwg-look` and set:
-    - **Icon Theme**: Colloid-Purple-Dracula-Dark (recommended)
+    - **Icon Theme**: Tela circle purple (recommended)
     - **Widget**: catppuccin-mocha-lavender-standard+default (recommended)
     - **Cursor theme**: Bibata-Modern-Ice
 - VPN widget: Waybar scripts assume interface name `pandvpn`; edit `~/.config/waybar/scripts/vpn-*.sh` to yours.
