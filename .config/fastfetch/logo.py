@@ -9,7 +9,7 @@ LOGOS = HERE / "logos"
 OUT = HERE / "logo.txt"
 SIZE = "40x20"
 # light top-left -> dark bottom-right
-STOPS = ("#d9c8ff", "#8d5be3", "#7c3aed")
+STOPS = ("#d9c8ff", "#9c6ded", "#7c3aed")
 
 Rgb = tuple[int, int, int]
 
