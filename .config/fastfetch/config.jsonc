@@ -8,12 +8,8 @@
     	"separator": ":"
     },
     "logo": {
-        "type": "builtin",
-        "width": 15,
-        "color": {
-        	"1": "#9966ff",
-        	"2": "#9966ff"
-        },
+        "type": "file-raw",
+        "source": "~/.config/fastfetch/logo.txt",
         "padding": {
         	"top": 2,
             "left": 1,
