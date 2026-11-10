@@ -88,7 +88,7 @@ source ~/.zshrc
 - 🖥 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=` (author: 4K 160Hz, scale 1.5, commented).
 - 📝 **Typora theme:** pick *Themes → Catppuccin Mocha* once in Typora.
 - 🎨 **SDDM theme (optional):** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
-- 🛡 **VPN widget:** `vpn-status.sh` / `vpn-toggle.sh` in `~/.config/waybar/scripts/` are placeholders built around a `hysteria-client.service` user unit. Put your own VPN start/stop/status logic there and change the `pandvpn` label.
+- 🛡 **VPN widget:** set your VPN in `~/.config/waybar/scripts/vpn-status.sh` and `vpn-toggle.sh` (placeholders).
 - 🖼 **Wallpaper / 👤 hyprlock avatar (optional):** replace `.config/hypr/wallpaper.jpg` and `.config/hypr/avatar.png` with your own.
 - 🥾 **rEFInd theme (optional):** `sudo EFI_ROOT=/boot/EFI ./install-refind.sh` copies the Catppuccin rEFInd config from `boot/EFI/refind`.
 

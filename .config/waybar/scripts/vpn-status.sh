@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
+# placeholder: replace the check below with your own vpn status command
 
-SERVICE="hysteria-client.service" # replace with your systemd user unit
-CONFIG="$HOME/.hysteria/client.yaml"
-
-if systemctl --user is-active --quiet "$SERVICE"; then
-    server=$(awk '/^server:/ {print $2; exit}' "$CONFIG" 2>/dev/null)
-    echo '{"text": "pandvpn 󰞀", "class": "connected", "tooltip": "VPN active ('"${server:-hysteria}"')"}'
+if false; then # e.g. systemctl --user is-active --quiet your-vpn.service
+    echo '{"text": "VPN 󰞀", "class": "connected", "tooltip": "VPN active"}'
 else
-    echo '{"text": "pandvpn 󰞀", "class": "disconnected", "tooltip": "VPN off"}'
+    echo '{"text": "VPN 󰞀", "class": "disconnected", "tooltip": "VPN off"}'
 fi
