@@ -16,27 +16,27 @@
 
 ---
 
-## Gallery
+## 📸 Gallery
 
 <table>
   <tr>
-    <td width="50%"><img src="previews/terminal.webp" alt="Terminal"><br><sub><b>Terminal</b> — ghostty + fastfetch</sub></td>
-    <td width="50%"><img src="previews/notifications.webp" alt="Notification center"><br><sub><b>Notification center</b> — SwayNC + Waybar VPN widget</sub></td>
+    <td colspan="2"><img src="previews/notifications.webp" alt="Notification center"><br><sub>🔔 <b>Notification center</b> — SwayNC, Nautilus and nwg-look with the installed themes</sub></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="previews/editor.webp" alt="Editor"><br><sub><b>Editor</b> — micro</sub></td>
+    <td width="50%"><img src="previews/terminal.webp" alt="Terminal"><br><sub>💻 <b>Terminal</b> — ghostty + fastfetch</sub></td>
+    <td width="50%"><img src="previews/editor.webp" alt="Editor"><br><sub>📝 <b>Editor</b> — micro</sub></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <td width="33%"><img src="previews/hyprlock.png" alt="Hyprlock"><br><sub><b>hyprlock</b></sub></td>
-    <td width="33%"><img src="previews/tofi.png" alt="Tofi"><br><sub><b>tofi</b> launcher</sub></td>
-    <td width="33%"><img src="previews/wlogout.png" alt="wlogout"><br><sub><b>wlogout</b></sub></td>
+    <td width="33%"><img src="previews/hyprlock.png" alt="Hyprlock"><br><sub>🔒 <b>hyprlock</b></sub></td>
+    <td width="33%"><img src="previews/tofi.png" alt="Tofi"><br><sub>🔍 <b>tofi</b> launcher</sub></td>
+    <td width="33%"><img src="previews/wlogout.png" alt="wlogout"><br><sub>⏻ <b>wlogout</b></sub></td>
   </tr>
 </table>
 
-## Quick start
+## 🚀 Quick start
 
 ```bash
 git clone https://github.com/dkorbelainen/hyprdots.git
@@ -50,7 +50,7 @@ chmod +x install.sh
 > [!NOTE]
 > Install [dependencies](#-dependencies) first.
 
-## Dependencies
+## 📦 Dependencies
 
 <details>
 <summary><b>Package list & install command</b></summary>
@@ -77,24 +77,25 @@ source ~/.zshrc
 
 </details>
 
-## Manual setup
+## 🔧 Manual setup
 
 <details>
 <summary><b>Steps the scripts don't cover</b></summary>
 
 <br>
 
-- **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=`.
-- **Typora theme:** pick *Themes → Catppuccin Mocha* once in Typora.
-- **Spotify:** launch `spotify-launcher` once, then re-run `./install.sh` to apply the Spicetify theme and Marketplace.
-- **SDDM theme (optional):** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
-- **VPN widget:** set your VPN in `~/.config/waybar/scripts/vpn-status.sh` and `vpn-toggle.sh`.
-- **Wallpaper / hyprlock avatar (optional):** replace `.config/hypr/wallpaper.jpg` and `.config/hypr/avatar.png` with your own.
-- **rEFInd theme (optional):** `sudo EFI_ROOT=/boot/EFI ./install-refind.sh` copies the Catppuccin rEFInd config from `boot/EFI/refind`.
+- 📺 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=`.
+- 📝 **Typora / Spicetify themes:** choose manually. Typora: *Themes → Catppuccin Mocha*. Spotify: Catppuccin is applied, more themes via *Marketplace*.
+- 🎵 **Spotify:** launch `spotify-launcher` once, then re-run `./install.sh` to apply Spicetify.
+- 🎨 **Stylus (Firefox):** install the [Stylus](https://addons.mozilla.org/firefox/addon/styl-us/) extension, then *Import* `firefox/stylus-catppuccin.json`.
+- 🎨 **SDDM theme (optional):** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
+- 🛡 **VPN widget:** set your VPN in `~/.config/waybar/scripts/vpn-status.sh` and `vpn-toggle.sh`.
+- 🌄 **Wallpaper / 👤 hyprlock avatar (optional):** replace `.config/hypr/wallpaper.jpg` and `.config/hypr/avatar.png` with your own.
+- 💾 **rEFInd theme (optional):** `sudo EFI_ROOT=/boot/EFI ./install-refind.sh` copies the Catppuccin rEFInd config from `boot/EFI/refind`.
 
 </details>
 
-## Attributions
+## 📜 Attributions
 
 - Catppuccin themes/icons: MIT.
 - Wallpaper `.config/hypr/wallpaper.jpg`: photo by Joshua Woroniecki, [Unsplash License](https://unsplash.com/photos/the-night-sky-is-filled-with-stars-and-trees-1ByBY06L-Z0).
