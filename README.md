@@ -46,7 +46,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-`install.sh` symlinks configs into `~/.config`, links the Typora theme, sets Typora as default markdown editor and applies the GTK theme.
+`install.sh` symlinks configs into `~/.config`, links the Typora theme, sets Typora as default markdown editor, applies the GTK theme and the Catppuccin Spicetify theme.
 
 > [!NOTE]
 > Install [dependencies](#-dependencies) first.
@@ -60,7 +60,7 @@ chmod +x install.sh
 
 - **Core:** `hyprland`, `waybar`, `swaync`, `tofi`, `wlogout`
 - **Daemons:** `hyprpaper`, `hypridle`, `hyprlock`
-- **Tools:** `ghostty`, `fastfetch`, `micro`, `typora`, `jq`, `nwg-look`, `gpu-screen-recorder`
+- **Tools:** `ghostty`, `fastfetch`, `micro`, `typora`, `spotify-launcher`, `spicetify-cli`, `jq`, `nwg-look`, `gpu-screen-recorder`
 - **Audio/brightness:** `pipewire`/`wireplumber`, `pavucontrol`, `wpctl`, `brightnessctl`, `playerctl`
 - **Screenshots:** `grim`, `slurp`, `wl-clipboard`, `imagemagick`
 - **Networking:** `iproute2`
@@ -70,8 +70,8 @@ chmod +x install.sh
 Arch-based distros:
 
 ```bash
-sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol gpu-screen-recorder brightnessctl playerctl grim slurp wl-clipboard imagemagick iproute2 libnotify nwg-look zsh git tela-circle-icon-theme-purple ffmpegthumbnailer gst-libav gst-plugins-ugly
-yay -S tofi wlogout typora bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
+sudo pacman -S spotify-launcher hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol gpu-screen-recorder brightnessctl playerctl grim slurp wl-clipboard imagemagick iproute2 libnotify nwg-look zsh git tela-circle-icon-theme-purple ffmpegthumbnailer gst-libav gst-plugins-ugly
+yay -S tofi wlogout typora spicetify-cli bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
 chsh -s $(which zsh) # change your shell to zsh
 source ~/.zshrc
 ```
@@ -87,6 +87,7 @@ source ~/.zshrc
 
 - 🖥 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=` (author: 4K 160Hz, scale 1.5, commented).
 - 📝 **Typora theme:** pick *Themes → Catppuccin Mocha* once in Typora.
+- 🎵 **Spotify:** launch `spotify-launcher` once, then re-run `./install.sh` to apply the Spicetify theme.
 - 🎨 **SDDM theme (optional):** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 - 🛡 **VPN widget:** set your VPN in `~/.config/waybar/scripts/vpn-status.sh` and `vpn-toggle.sh` (placeholders).
 - 🖼 **Wallpaper / 👤 hyprlock avatar (optional):** replace `.config/hypr/wallpaper.jpg` and `.config/hypr/avatar.png` with your own.

@@ -60,6 +60,22 @@ apply_gtk_theme() {
   log "Applied GTK theme, icons and cursor"
 }
 
+setup_spicetify() {
+  command -v spicetify >/dev/null || return 0
+  link_path "$ROOT_DIR/spicetify/Themes/catppuccin" "$(spicetify path userdata)/Themes/catppuccin"
+
+  local spotify="$HOME/.local/share/spotify-launcher/install/usr/share/spotify"
+  local prefs="$HOME/.config/spotify/prefs"
+  if [[ ! -d "$spotify" || ! -f "$prefs" ]]; then
+    log "Run spotify-launcher once, then re-run install.sh to apply the Spicetify theme"
+    return
+  fi
+  spicetify config spotify_path "$spotify" prefs_path "$prefs" \
+    current_theme catppuccin color_scheme mocha \
+    inject_css 1 replace_colors 1 overwrite_assets 1
+  spicetify backup apply
+}
+
 setup_directories() {
   mkdir -p "$HOME/Videos/replays"
   log "Created directory: $HOME/Videos/replays"
@@ -69,6 +85,7 @@ link_user_configs
 link_typora_theme
 set_default_markdown_editor
 apply_gtk_theme
+setup_spicetify
 setup_directories
 
 log "All done. Restart your session to load the new configs."
