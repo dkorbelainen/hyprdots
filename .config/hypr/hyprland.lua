@@ -14,11 +14,12 @@
 
 hl.monitor({
     output   = "",
-    mode     = "1920x1080@60",
+    mode     = "preferred",
     position = "auto",
     scale    = "auto",
 })
 
+-- author setup: 4K 160Hz
 --monitor=,3840x2160@160,auto,1.5
 
 --##################

@@ -37,12 +37,27 @@ link_user_configs() {
   fi
 }
 
+link_typora_theme() {
+  local themes="$HOME/.config/Typora/themes"
+  link_path "$ROOT_DIR/typora/themes/catppuccin" "$themes/catppuccin"
+  link_path "$ROOT_DIR/typora/themes/catppuccin-mocha.css" "$themes/catppuccin-mocha.css"
+}
+
+set_default_markdown_editor() {
+  if command -v xdg-mime >/dev/null; then
+    xdg-mime default typora.desktop text/markdown text/x-markdown
+    log "Default markdown editor: typora"
+  fi
+}
+
 setup_directories() {
   mkdir -p "$HOME/Videos/replays"
   log "Created directory: $HOME/Videos/replays"
 }
 
 link_user_configs
+link_typora_theme
+set_default_markdown_editor
 setup_directories
 
 log "All done. Restart your session to load the new configs."

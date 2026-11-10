@@ -59,6 +59,7 @@ chmod +x install.sh
 The script:
 - 🔗 symlinks configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, micro)
 - 🐚 links `.zshrc` and `.p10k.zsh`
+- 📝 links the Catppuccin Mocha Typora theme and sets Typora as default markdown editor
 
 > [!NOTE]
 > Install [dependencies](#-dependencies) first.
@@ -72,7 +73,7 @@ The script:
 
 - **Core:** `hyprland`, `waybar`, `swaync`, `tofi`, `wlogout`
 - **Daemons:** `hyprpaper`, `hypridle`, `hyprlock`
-- **Tools:** `ghostty`, `fastfetch`, `micro`, `jq`, `nwg-look`, `gpu-screen-recorder`
+- **Tools:** `ghostty`, `fastfetch`, `micro`, `typora`, `jq`, `nwg-look`, `gpu-screen-recorder`
 - **Audio/brightness:** `pipewire`/`wireplumber`, `pavucontrol`, `wpctl`, `brightnessctl`, `playerctl`
 - **Screenshots:** `grim`, `slurp`, `wl-clipboard`, `imagemagick`
 - **Networking:** `iproute2`
@@ -83,7 +84,7 @@ Arch-based distros:
 
 ```bash
 sudo pacman -S hyprland waybar swaync hyprpaper hypridle hyprlock ghostty fastfetch micro jq pipewire wireplumber pavucontrol gpu-screen-recorder brightnessctl playerctl grim slurp wl-clipboard imagemagick iproute2 libnotify nwg-look zsh git tela-circle-icon-theme-purple ffmpegthumbnailer gst-libav gst-plugins-ugly
-yay -S tofi wlogout bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
+yay -S tofi wlogout typora bibata-cursor-theme catppuccin-gtk-theme-mocha sddm-astronaut-theme-git
 chsh -s $(which zsh) # change your shell to zsh
 source ~/.zshrc
 ```
@@ -97,12 +98,14 @@ source ~/.zshrc
 
 <br>
 
+- 🖥 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=` (author: 4K 160Hz, commented).
 - 🖼 **Wallpaper:** sample at `.config/hypr/wallpaper.jpg` — replace with your own.
 - 🎨 **SDDM theme:** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 - 🎛 **nwg-look:**
   - Icon theme: Tela circle purple
   - Widget: catppuccin-mocha-lavender-standard+default
   - Cursor: Bibata-Modern-Ice
+- 📝 **Typora theme:** pick *Themes → Catppuccin Mocha* in Typora.
 - 🛡 **VPN widget:** `~/.config/waybar/scripts/vpn-*.sh` are placeholders (interface `pandvpn`); replace with your own VPN logic.
 - 📸 **Screenshot tool:** `~/.config/hypr/hypr-screenshot` — Tofi menu, saves to `~/Pictures/SS`.
 - 👤 **Hyprlock avatar:** replace `~/.config/hypr/avatar.png` with your image.
