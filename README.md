@@ -60,6 +60,7 @@ The script:
 - 🔗 symlinks configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, micro)
 - 🐚 links `.zshrc` and `.p10k.zsh`
 - 📝 links the Catppuccin Mocha Typora theme and sets Typora as default markdown editor
+- 🎨 applies GTK theme, icons and cursor (Catppuccin Mocha Lavender, Tela circle purple, Bibata)
 
 > [!NOTE]
 > Install [dependencies](#-dependencies) first.
@@ -98,17 +99,11 @@ source ~/.zshrc
 
 <br>
 
-- 🖥 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=` (author: 4K 160Hz, commented).
-- 🖼 **Wallpaper:** sample at `.config/hypr/wallpaper.jpg` — replace with your own.
-- 🎨 **SDDM theme:** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
-- 🎛 **nwg-look:**
-  - Icon theme: Tela circle purple
-  - Widget: catppuccin-mocha-lavender-standard+default
-  - Cursor: Bibata-Modern-Ice
-- 📝 **Typora theme:** pick *Themes → Catppuccin Mocha* in Typora.
+- 🖥 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=` (author: 4K 160Hz, scale 1.5, commented).
+- 📝 **Typora theme:** pick *Themes → Catppuccin Mocha* once in Typora.
+- 🎨 **SDDM theme (optional):** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 - 🛡 **VPN widget:** `~/.config/waybar/scripts/vpn-*.sh` are placeholders (interface `pandvpn`); replace with your own VPN logic.
-- 📸 **Screenshot tool:** `~/.config/hypr/hypr-screenshot` — Tofi menu, saves to `~/Pictures/SS`.
-- 👤 **Hyprlock avatar:** replace `~/.config/hypr/avatar.png` with your image.
+- 🖼 **Wallpaper / 👤 hyprlock avatar (optional):** replace `.config/hypr/wallpaper.jpg` and `.config/hypr/avatar.png` with your own.
 - 🥾 **rEFInd theme (optional):** `sudo EFI_ROOT=/boot/EFI ./install-refind.sh` copies the Catppuccin rEFInd config from `boot/EFI/refind`.
 
 </details>

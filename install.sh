@@ -50,6 +50,16 @@ set_default_markdown_editor() {
   fi
 }
 
+apply_gtk_theme() {
+  command -v gsettings >/dev/null || return 0
+  local schema=org.gnome.desktop.interface
+  gsettings set "$schema" gtk-theme "catppuccin-mocha-lavender-standard+default"
+  gsettings set "$schema" icon-theme "Tela-circle-purple-dark"
+  gsettings set "$schema" cursor-theme "Bibata-Modern-Ice"
+  gsettings set "$schema" color-scheme "prefer-dark"
+  log "Applied GTK theme, icons and cursor"
+}
+
 setup_directories() {
   mkdir -p "$HOME/Videos/replays"
   log "Created directory: $HOME/Videos/replays"
@@ -58,6 +68,7 @@ setup_directories() {
 link_user_configs
 link_typora_theme
 set_default_markdown_editor
+apply_gtk_theme
 setup_directories
 
 log "All done. Restart your session to load the new configs."
