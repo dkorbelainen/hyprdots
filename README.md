@@ -13,19 +13,9 @@
 ![Catppuccin](https://img.shields.io/badge/Catppuccin-Mocha-b4befe?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-a78bfa?style=for-the-badge)
 
-[✨ Features](#-features) · [🖼 Gallery](#-gallery) · [🚀 Quick start](#-quick-start) · [📦 Dependencies](#-dependencies) · [🛠 Manual setup](#-manual-setup)
-
 </div>
 
 ---
-
-## ✨ Features
-
-- 🟣 **Purple everything** — Hyprland, Waybar, SwayNC, Tofi, wlogout, Ghostty, GTK
-- 📸 **Screenshot helper** — Tofi menu to copy or save as `webp`/`png`
-- 🛡 **Waybar VPN widget** — placeholder status/toggle scripts, bring your own VPN
-- 🖥 **Fastfetch** — gradient ASCII logos, selectable
-- ⚡ **One-command install** — symlinks everything into `~/.config`
 
 ## 🖼 Gallery
 
@@ -56,11 +46,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-The script:
-- 🔗 symlinks configs into `~/.config` (hyprland, waybar, swaync, tofi, wlogout, ghostty, fastfetch, nwg-look, micro)
-- 🐚 links `.zshrc` and `.p10k.zsh`
-- 📝 links the Catppuccin Mocha Typora theme and sets Typora as default markdown editor
-- 🎨 applies GTK theme, icons and cursor (Catppuccin Mocha Lavender, Tela circle purple, Bibata)
+`install.sh` symlinks configs into `~/.config`, links the Typora theme, sets Typora as default markdown editor and applies the GTK theme.
 
 > [!NOTE]
 > Install [dependencies](#-dependencies) first.
@@ -102,7 +88,7 @@ source ~/.zshrc
 - 🖥 **Monitor:** `hyprland.conf` uses `preferred` mode; set your own in `monitor=` (author: 4K 160Hz, scale 1.5, commented).
 - 📝 **Typora theme:** pick *Themes → Catppuccin Mocha* once in Typora.
 - 🎨 **SDDM theme (optional):** [Astronaut theme](https://github.com/Keyitdev/sddm-astronaut-theme)
-- 🛡 **VPN widget:** `~/.config/waybar/scripts/vpn-*.sh` are placeholders (interface `pandvpn`); replace with your own VPN logic.
+- 🛡 **VPN widget:** `vpn-status.sh` / `vpn-toggle.sh` in `~/.config/waybar/scripts/` are placeholders built around a `hysteria-client.service` user unit. Put your own VPN start/stop/status logic there and change the `pandvpn` label.
 - 🖼 **Wallpaper / 👤 hyprlock avatar (optional):** replace `.config/hypr/wallpaper.jpg` and `.config/hypr/avatar.png` with your own.
 - 🥾 **rEFInd theme (optional):** `sudo EFI_ROOT=/boot/EFI ./install-refind.sh` copies the Catppuccin rEFInd config from `boot/EFI/refind`.
 
