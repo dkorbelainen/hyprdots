@@ -64,6 +64,8 @@ setup_spicetify() {
   command -v spicetify >/dev/null || return 0
   link_path "$ROOT_DIR/spicetify/Themes/catppuccin" "$(spicetify path userdata)/Themes/catppuccin"
 
+  link_path "$ROOT_DIR/spicetify/CustomApps/marketplace" "$(spicetify path userdata)/CustomApps/marketplace"
+
   local spotify="$HOME/.local/share/spotify-launcher/install/usr/share/spotify"
   local prefs="$HOME/.config/spotify/prefs"
   if [[ ! -d "$spotify" || ! -f "$prefs" ]]; then
@@ -72,7 +74,8 @@ setup_spicetify() {
   fi
   spicetify config spotify_path "$spotify" prefs_path "$prefs" \
     current_theme catppuccin color_scheme mocha \
-    inject_css 1 replace_colors 1 overwrite_assets 1
+    inject_css 1 replace_colors 1 overwrite_assets 1 \
+    inject_theme_js 1 custom_apps marketplace
   spicetify backup apply
 }
 
