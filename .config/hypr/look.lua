@@ -32,6 +32,13 @@ hl.config({
     },
 })
 
+hl.config({
+    render = {
+        -- Avoid HDR mode switches when entering fullscreen.
+        cm_auto_hdr = 0,
+    },
+})
+
 -- https://wiki.hypr.land/Configuring/Variables/#decoration
 
 hl.config({
