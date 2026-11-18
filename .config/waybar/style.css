@@ -74,6 +74,8 @@ tooltip label {
 #pulseaudio,
 #network,
 #clock,
+#backlight,
+#battery,
 #custom-vpn,
 #custom-notification {
 	background-color: @bg0;
@@ -94,6 +96,22 @@ tooltip label {
 
 #pulseaudio {
 	color: @amethyst2;
+}
+
+#backlight {
+	color: @amethyst1;
+}
+
+#battery {
+	color: @green;
+}
+
+#battery.warning {
+	color: @yellow;
+}
+
+#battery.critical {
+	color: @red;
 }
 
 #custom-vpn.connected {

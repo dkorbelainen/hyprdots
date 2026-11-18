@@ -18,7 +18,8 @@
 -- Autostart
 hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("waybar")
+    -- use ~/.config/waybar/local.jsonc when a machine provides one
+    hl.exec_cmd("[ -f ~/.config/waybar/local.jsonc ] && waybar -c ~/.config/waybar/local.jsonc || waybar")
     hl.exec_cmd("swaync")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("~/.config/hypr/start-replay-buffer.sh")
