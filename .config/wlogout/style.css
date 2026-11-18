@@ -36,17 +36,17 @@ button:hover,button:focus {
 }
 
 #shutdown {
-    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/shutdown.svg");
+    background-image: url("icons/wlogout/mocha/lavender/shutdown.svg");
 }
 
 #reboot {
-    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/reboot.svg");
+    background-image: url("icons/wlogout/mocha/lavender/reboot.svg");
 }
 
 #suspend {
-    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/suspend.svg");
+    background-image: url("icons/wlogout/mocha/lavender/suspend.svg");
 }
 
 #lock {
-    background-image: url("/home/pand/.config/wlogout/icons/wlogout/mocha/lavender/lock.svg");
+    background-image: url("icons/wlogout/mocha/lavender/lock.svg");
 }

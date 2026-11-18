@@ -1,1 +1,3 @@
 .idea/
+.config/hypr/local.d/
+.config/hypr/local.lua

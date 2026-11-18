@@ -140,3 +140,6 @@ require("autostart")
 require("input")
 require("look")
 require("mocha")
+
+-- machine-local overrides, untracked, loaded last so they win
+pcall(require, "local")
